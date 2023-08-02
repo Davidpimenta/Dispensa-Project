@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Orçamento Pessoal</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <div>
+                <img src="images/logo.png" alt="Logo">
+                <nav><a href="index.html" class="pagina desativado">Cadastro</a></nav>
+                <nav><a href="consulta.html" class="pagina ativo">Consulta</a>
+                </nav>
+            </div>
+            <nav><img src="images/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="menu-cell"></nav>
+        </menu>
+    </header>
+    <section id="menu-mobile">
+        <nav class="nav-menu"><a href="index.html" class="pagina ativo">Cadastro</a></nav>
+        <nav class="nav-menu"><a href="consulta.html" class="pagina desativado">Consulta</a>
+        </nav>
+    </section>
+    
+    <main>
+        <h1>Consulta de despesas</h1>
+
+        <section>
+            <select name="ano" id="ano">
+                <option value="">Ano</option>
+                <option value="2018">2018</option>
+            </select>
+            <select name="mes" id="mes">
+                <option value="">Mês</option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <option value="março">Março</option>
+                <option value="abril">Abril</option>
+                <option value="maio">Maio</option>
+                <option value="junho">Junho</option>
+                <option value="julho">Julho</option>
+                <option value="agosto">Agosto</option>
+                <option value="setembro">Setembro</option>
+                <option value="outubro">Outubro</option>
+                <option value="novembro">Novembro</option>
+                <option value="dezembro">Dezembro</option>
+
+            </select>
+            <input type="number" min="0" max="31" placeholder="Dia" id="dia">
+            <select name="tipo" id="tipo">
+                <option value="">Tipo</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="educacao">Educação</option>
+                <option value="lazer">Lazer</option>
+                <option value="saude">Saúde</option>
+                <option value="transporte">Transporte</option>
+            </select>
+            <input type="text"  name="descricao" id="descricao" placeholder="Descrição">
+            <input type="number" name="valor" id="valor" min="0" placeholder="Valor">
+
+            <button id="pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>
+    </main>
+
+    <div id="table-div">
+        <table>
+            <thead>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>valor</th>
+                <th style="color: white;">nada</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="js.js"></script>
+    <script src="https://kit.fontawesome.com/0dad49e0d6.js" crossorigin="anonymous"></script>
+</body>
+</html>

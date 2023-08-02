@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+}
+
+
+
+header{
+    position: relative;
+    padding: 15px;
+    background-color: #007BFF;
+    transition: 1s all;
+    
+    
+}
+
+menu{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+menu > div{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-cell{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: inline-block;
+}
+
+.pagina{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    flex: 2;
+}
+
+.desativado{
+    color: #b3d6fca9!important;
+}
+
+
+.pagina:visited{
+    color: white;
+}
+
+.ativo{
+    color: white;
+}
+
+
+main{
+    margin: auto;
+    width: 80%;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+main h1{
+    font-size: 3.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+}
+
+select, input{
+    padding: 5px 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+#ano{
+    width: 20%;
+}
+
+#mes{
+    width: 10%;
+}
+
+#dia{
+    width: 10%;
+}
+
+#tipo{
+    width: calc(50% - 30px);
+}
+
+#descricao{
+    width: 50%;
+}
+
+#valor{
+    width: 20%;
+}
+
+button{
+    font-weight: 900;
+    color: white;
+    font-size: 25px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    height: 100%;
+    background-color: #007BFF;
+    border: 0;
+    cursor: pointer;
+}
+
+
+#menu-mobile{
+    width: 80%;
+    padding: 0px 10%;
+    margin: auto;
+    background-color: #007BFF;
+    position: absolute;
+    left: 0%;
+    height: 0px;
+}
+
+#alert{
+    width: 80%;
+    z-index: 999;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    padding: 20px 0px;
+    transform: translate(-50%);
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#divh1 h1{
+    color: hsl(354, 70%, 46%);
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    text-align: justify;
+ 
+    
+}
+
+#divh1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: gray;
+}
+
+#divh1 h2{
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#divh1 h2:hover{
+    color: black;
+}
+
+#divp{
+    padding: 0px 10px;
+}
+
+#divbutton{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: end;
+}
+
+
+#voltar{
+    background-color: hsl(354, 70%, 46%);
+    font-size: 16px;
+    font-weight: 100;
+    padding: 10px 15px;
+}
+
+hr{
+    border: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+#sombreado{
+    position: fixed;
+    display: none;
+    top: 0px;
+    min-width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    
+}
+
+
+
+
+
+@keyframes alertopen {
+    0%{
+        top: -10px;
+    }
+
+
+    100%{
+        
+        top: 30px;
+    }
+    
+}
+
+@keyframes alertclose {
+    100%{
+        top: -10px;
+    }
+
+
+    0%{
+        top: 30px;
+    }
+}
+
+@keyframes menuanimation{
+    
+    0%{
+        height: 5px;
+    }
+
+
+    100%{
+        height: 53px;
+    }
+}
+
+
+@keyframes menuanimationclose{
+    100%{
+        height: 5px;
+    }
+    0%{
+        height: 53px;
+    }
+}
+
+
+/**Consulta**/
+
+
+#table-sec{
+    margin-top: 50px;
+}
+
+table{
+
+    width: 80%;
+    margin: auto;
+
+}
+
+
+th,td{
+    padding: 10px;
+    text-align: left;
+}
+th{
+    border-bottom: 1px solid black;
+}
+
+
+.btn{
+    background-color: #C82333;
+    padding: 5px 15px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#pesquisar{
+    padding: 3px 8px;
+}
+
+
+
+/**Responsividade**/
+
+
+
+@media screen and (min-width: 1200px){
+    #alert{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px){
+    section{
+        justify-content: start;
+    }
+
+    #ano{
+        width: 20%;
+    }
+
+    #mes{
+        width: 20%;
+    }
+
+    #dia{
+        width: 10%;
+    }
+
+    #tipo{
+        width: calc(30% - 30px);
+    }
+
+    #descricao{
+        width: 50%;
+    }
+
+    #valor{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 730px){
+    section{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #ano{
+        width: 100%;
+    }
+
+    #mes{
+        width: 100%;
+    }
+
+    #dia{
+        width: calc(100% - 34px);
+    }
+
+    #tipo{
+        width: 100%;
+    }
+
+    #descricao{
+        width: calc(100% - 34px);
+    }
+
+    #valor{
+        width: calc(100% - 34px);
+    }
+
+    .menu-cell{
+        width: 35px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        border: 2px solid  rgba(185, 185, 185, 0.596);
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    menu > div > nav{
+        display: none;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+
+    
+    #table-div{
+        width: 100%;
+        overflow-x: auto;
+    }
+    table{
+       
+    }
+
+    td{
+        font-size: 12px;
+    }
+
+    .btn{
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    #pesquisar{
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
+
+
+
+/**Responsividade**/
