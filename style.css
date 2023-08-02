@@ -275,10 +275,11 @@ hr{
 
 /**Consulta**/
 
-
-#table-sec{
-    margin-top: 50px;
+#table-div{
+    width: 100%;
+    overflow-x: auto;
 }
+
 
 table{
 
@@ -402,13 +403,7 @@ th{
 @media screen and (max-width: 400px){
 
     
-    #table-div{
-        width: 100%;
-        overflow-x: auto;
-    }
-    table{
-       
-    }
+    
 
     td{
         font-size: 12px;
